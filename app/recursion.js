@@ -8,8 +8,6 @@ exports.recursionAnswers = {
       function recurseAbc(objData){
           var allFiles = objData.files;
 
-          if (typeof allFiles !== 'undefined')
-          {
             for (var i = 0; i < allFiles.length; i++)
             {
                 if (typeof allFiles[i] === 'string')
@@ -21,10 +19,11 @@ exports.recursionAnswers = {
                 recurseAbc(allFiles[i]);
                 }
             }
-          };
-      }
+
+      };
 
       recurseAbc(data);
+      console.log(recurFile);
       return recurFile;
 
   },
